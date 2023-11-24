@@ -1,6 +1,7 @@
 import React,{useState} from "react";
 const Modal=()=>{
     const[showModal,setShowModal]=useState(false);
+    const closeModal  =()=>  setShowModal(false)
     
     const MyModal=()=>{
         return(
@@ -9,7 +10,7 @@ const Modal=()=>{
             <p> Subscribe to our newsletter and never miss our designs,latest
             <br></br>news.etc.Our newsletter is sent once a week ,every Monday
             </p>
-        <button> Accept it </button>
+        <button onClick={closeModal }> Accept it </button>
         </>
         )
     }
